@@ -42,3 +42,18 @@
 		});
 	}
 })();
+
+/*==================================== BURGER ====================================*/
+
+; (function () {
+	let burger = document.querySelector('.header__burger');
+	let menu = document.querySelector('.header__menu');
+	
+	
+	burger.addEventListener('click', function () {
+		this.classList.toggle('header__burger--active');
+		menu.classList.toggle('header__menu--open');
+		
+		
+	});
+})();

@@ -1,3 +1,268 @@
 /*==================================== MEDIA ====================================*/
 /*==================================== MEDIA ====================================*/
 
+
+/*------------------------------ 1160 ------------------------------*/
+@media (max-width: 1160px) {
+	.services {
+		&__cards {
+			display: grid;
+			grid-template: 1fr 1fr / 1fr 1fr;
+			justify-items: center;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		&__card {
+			margin-bottom: 50px;
+		}
+	}
+
+	.best {
+		&__card {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.companies {
+		&__cards {
+			display: grid;
+			grid-template: 1fr 1fr / 1fr 1fr;
+			justify-items: center;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		&__card {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+/*------------------------------ 1040 ------------------------------*/
+@media (max-width: 1040px) {
+	.block {
+		display: block;
+		padding-bottom: 540px;
+
+		&__inner {
+			display: block;
+			max-width: 554px;
+			margin: 0 auto;
+		}
+
+		&__image-box {
+			display: none;
+		}
+	}
+}
+
+
+/*------------------------------ 890 ------------------------------*/
+@media (max-width: 890px) {
+	.best {
+		margin-bottom: 1290px;
+
+		&__cards {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__card {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+/*------------------------------ 775 ------------------------------*/
+
+@media (max-width: 775px) {
+	.header {
+
+		&__body {
+			padding: 10px 0;
+		}
+
+		&__menu {
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			background: $yellow;
+			height: 100vh;
+			min-width: 320px;
+			transform: translateX(100%);
+			transition: all .3s;
+
+			&--open {
+				transform: translateX(0%);
+			}
+		}
+
+		&__list {
+			flex-direction: column;
+			height: 100%;
+			padding: 100px 0;
+
+		}
+
+		&__burger {
+			width: 50px;
+			height: 50px;
+			z-index: 3;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			cursor: pointer;
+			position: relative;
+			transition: all .3s;
+			margin-left: 20px;
+
+			&-line {
+				width: 40px;
+				height: 3px;
+				border-radius: 4px;
+				background: #fff;
+				transition: all .3s;
+			}
+
+			&--active {
+				transform: rotate(45deg);
+
+				.header__burger-line {
+					background: #000;
+
+					&:first-child,
+					&:last-child {
+						transform: rotate(90deg);
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*------------------------------ 700 ------------------------------*/
+@media (max-width: 700px) {
+	.excellence {
+		&__inner {
+			flex-direction: column;
+		}
+		&__text {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+/*------------------------------ 620 ------------------------------*/
+@media (max-width: 620px) {
+	.services {
+		&__heading-text {
+			width: 100%;
+			text-align: center;
+		}
+		&__cards {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.companies {
+		&__cards {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+
+/*------------------------------ 560 ------------------------------*/
+@media (max-width: 560px) {
+	.acc {
+		&__tab {
+			&--active {
+				.acc__content {
+					height: 190px;
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------ 520 ------------------------------*/
+
+@media (max-width: 520px) {
+	.main-heading {
+		font-size: 52px;
+		margin-bottom: 40px;
+	}
+
+	.best {
+		padding-top: 100px;
+
+		&__heading {
+			font-size: 40px;
+		}
+	}
+}
+
+/*------------------------------ 420 ------------------------------*/
+@media (max-width: 420px) {
+	.hero {
+		&__tags {
+			flex-direction: column;
+		}
+
+		&__text {
+			font-size: 18px;
+		}
+
+		&__button-box {
+			flex-direction: column;
+		}
+
+		&__button {
+			margin-bottom: 10px;
+			max-width: 180px;
+			text-align: center;
+		}
+	}
+
+	.best {
+		&__heading {
+			font-size: 30px;
+		}
+	}
+}
+
+/*------------------------------ 370 ------------------------------*/
+
+@media (max-width: 370px) {
+	.main-heading {
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.acc {
+		&__link-text {
+			font-size: 12px;
+		}
+
+		&__content-title {
+			font-size: 12px;
+		}
+	}
+}

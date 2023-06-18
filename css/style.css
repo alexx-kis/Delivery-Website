@@ -174,7 +174,8 @@ html {
 /*==================================== HEADER ====================================*/
 /*==================================== HEADER ====================================*/
 .header {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   width: 100%;
 }
 .header__top {
@@ -256,6 +257,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 10px;
 }
 .header__list-item {
   padding: 10px;
@@ -567,6 +569,7 @@ html {
   color: #fff;
   text-align: center;
   margin-bottom: 40px;
+  padding: 0 20px;
 }
 .best__button {
   display: block;
@@ -652,13 +655,15 @@ html {
 /*==================================== BLOCK ====================================*/
 /*==================================== BLOCK ====================================*/
 .block {
+  padding-bottom: 200px;
+}
+.block__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 200px;
 }
 .block__image-box {
   border: 20px solid #ffcc00;
@@ -715,6 +720,10 @@ html {
   color: #ffffff;
   background: #ba0000;
 }
+.tabs__content {
+  position: relative;
+}
+
 .tab {
   padding: 40px 40px 30px;
   background: #ba0000;
@@ -847,7 +856,7 @@ html {
 .excellence__heading {
   margin-bottom: 35px;
   font-size: 30px;
-  line-height: 24px;
+  line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -859,6 +868,7 @@ html {
   font-weight: 400;
   letter-spacing: 0.03em;
   color: #ffffff;
+  margin-right: 20px;
 }
 .excellence__button {
   background: #9d0000;
@@ -868,6 +878,7 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #ffffff;
+  width: 128px;
 }
 
 /*==================================== COMPANIES ====================================*/
@@ -986,4 +997,257 @@ html {
 }
 .footer__socials .footer__column-link:hover {
   color: #017edf;
+}
+
+/*==================================== MEDIA ====================================*/
+/*==================================== MEDIA ====================================*/
+/*==================================== MEDIA ====================================*/
+/*==================================== MEDIA ====================================*/
+/*------------------------------ 1160 ------------------------------*/
+@media (max-width: 1160px) {
+  .services__cards {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .services__card {
+    margin-bottom: 50px;
+  }
+  .best__card {
+    margin-right: 10px;
+  }
+  .best__card:last-child {
+    margin-right: 0;
+  }
+  .best__card img {
+    width: 100%;
+  }
+  .companies__cards {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr;
+    justify-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .companies__card {
+    margin-bottom: 20px;
+  }
+}
+/*------------------------------ 1040 ------------------------------*/
+@media (max-width: 1040px) {
+  .block {
+    display: block;
+    padding-bottom: 540px;
+  }
+  .block__inner {
+    display: block;
+    max-width: 554px;
+    margin: 0 auto;
+  }
+  .block__image-box {
+    display: none;
+  }
+}
+/*------------------------------ 890 ------------------------------*/
+@media (max-width: 890px) {
+  .best {
+    margin-bottom: 1290px;
+  }
+  .best__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .best__card {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+/*------------------------------ 775 ------------------------------*/
+@media (max-width: 775px) {
+  .header__body {
+    padding: 10px 0;
+  }
+  .header__menu {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #ffcc00;
+    height: 100vh;
+    min-width: 320px;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__menu--open {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    padding: 100px 0;
+  }
+  .header__burger {
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-left: 20px;
+  }
+  .header__burger-line {
+    width: 40px;
+    height: 3px;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__burger--active {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header__burger--active .header__burger-line {
+    background: #000;
+  }
+  .header__burger--active .header__burger-line:first-child, .header__burger--active .header__burger-line:last-child {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    position: absolute;
+  }
+}
+/*------------------------------ 700 ------------------------------*/
+@media (max-width: 700px) {
+  .excellence__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .excellence__text {
+    margin-bottom: 40px;
+  }
+}
+/*------------------------------ 620 ------------------------------*/
+@media (max-width: 620px) {
+  .services__heading-text {
+    width: 100%;
+    text-align: center;
+  }
+  .services__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .companies__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*------------------------------ 560 ------------------------------*/
+@media (max-width: 560px) {
+  .acc__tab--active .acc__content {
+    height: 190px;
+  }
+}
+/*------------------------------ 520 ------------------------------*/
+@media (max-width: 520px) {
+  .main-heading {
+    font-size: 52px;
+    margin-bottom: 40px;
+  }
+  .best {
+    padding-top: 100px;
+  }
+  .best__heading {
+    font-size: 40px;
+  }
+}
+/*------------------------------ 420 ------------------------------*/
+@media (max-width: 420px) {
+  .hero__tags {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero__text {
+    font-size: 18px;
+  }
+  .hero__button-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero__button {
+    margin-bottom: 10px;
+    max-width: 180px;
+    text-align: center;
+  }
+  .best__heading {
+    font-size: 30px;
+  }
+}
+/*------------------------------ 370 ------------------------------*/
+@media (max-width: 370px) {
+  .main-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .acc__link-text {
+    font-size: 12px;
+  }
+  .acc__content-title {
+    font-size: 12px;
+  }
 }
