@@ -47,12 +47,12 @@
 
 ; (function () {
 	let burger = document.querySelector('.header__burger');
-	let menu = document.querySelector('.header__menu');
+	let aside = document.querySelector('.header__aside');
 	
 	
 	burger.addEventListener('click', function () {
 		this.classList.toggle('header__burger--active');
-		menu.classList.toggle('header__menu--open');
+		aside.classList.toggle('header__aside--open');
 		
 		
 	});

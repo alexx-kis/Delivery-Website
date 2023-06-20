@@ -315,6 +315,10 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.header__aside {
+  display: none;
+}
+
 /*==================================== HERO ====================================*/
 /*==================================== HERO ====================================*/
 .hero {
@@ -1071,17 +1075,24 @@ html {
 }
 /*------------------------------ 775 ------------------------------*/
 @media (max-width: 775px) {
-  .header__body {
-    padding: 10px 0;
+  .header__top {
+    display: none;
   }
-  .header__menu {
+  .header__aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 320px;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
     background: #ffcc00;
     height: 100vh;
-    min-width: 320px;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
@@ -1089,18 +1100,82 @@ html {
     -o-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .header__menu--open {
+  .header__aside--open {
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
   }
-  .header__list {
+  .header__aside-inner {
+    background: #ba0000;
+    height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+  }
+  .header__aside-bottom {
     height: 100%;
-    padding: 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__aside-link {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #ba0000;
+    -webkit-transition: font-weight 0.1s;
+    -o-transition: font-weight 0.1s;
+    transition: font-weight 0.1s;
+  }
+  .header__lang {
+    margin-right: 0;
+  }
+  .header__aside-menu {
+    height: 100%;
+    max-height: 500px;
+    padding: 20px 0;
+  }
+  .header__aside-list {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__body {
+    padding: 10px 0;
   }
   .header__burger {
     width: 50px;
@@ -1130,7 +1205,7 @@ html {
     width: 40px;
     height: 3px;
     border-radius: 4px;
-    background: #fff;
+    background: #ba0000;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -1141,13 +1216,20 @@ html {
             transform: rotate(45deg);
   }
   .header__burger--active .header__burger-line {
-    background: #000;
+    background: #ffcc00;
   }
   .header__burger--active .header__burger-line:first-child, .header__burger--active .header__burger-line:last-child {
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
     position: absolute;
+  }
+  .header__search {
+    margin-left: auto;
+  }
+  .hero {
+    padding-top: 70px;
+    background: url(../img/hero_bg_overlay.png) no-repeat 100%/cover, url(../img/hero-bg.jpg) 0px 70px/cover no-repeat;
   }
 }
 /*------------------------------ 700 ------------------------------*/

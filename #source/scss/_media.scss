@@ -40,6 +40,7 @@
 			max-width: 600px;
 			margin: 0 auto;
 		}
+
 		&__card {
 			margin-bottom: 20px;
 		}
@@ -88,32 +89,85 @@
 @media (max-width: 775px) {
 	.header {
 
+		&__top {
+			display: none;
+		}
+
+		&__aside {
+			display: flex;
+			flex-direction: column;
+			min-width: 320px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background: $yellow;
+			height: 100vh;
+			transform: translateX(100%);
+			transition: all .3s;
+		}
+
+		&__aside--open {
+			transform: translateX(0%);
+		}
+
+		&__aside-inner {
+			background: $red;
+			height: 150px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			// display: none;
+		}
+
+		&__aside-bottom {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__aside-link {
+			display: block;
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.03em;
+			color: #ba0000;
+			-webkit-transition: font-weight 0.1s;
+			-o-transition: font-weight 0.1s;
+			transition: font-weight 0.1s;
+		}
+
+		&__lang {
+			margin-right: 0;
+		}
+
+		&__aside-menu {
+			height: 100%;
+			max-height: 500px;
+			padding: 20px 0;
+		}
+
+		&__aside-list {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__menu {
+			display: none;
+		}
+
 		&__body {
 			padding: 10px 0;
 		}
 
-		&__menu {
-			position: absolute;
-			top: 0px;
-			bottom: 0px;
-			right: 0px;
-			background: $yellow;
-			height: 100vh;
-			min-width: 320px;
-			transform: translateX(100%);
-			transition: all .3s;
-
-			&--open {
-				transform: translateX(0%);
-			}
-		}
-
-		&__list {
-			flex-direction: column;
-			height: 100%;
-			padding: 100px 0;
-
-		}
 
 		&__burger {
 			width: 50px;
@@ -132,7 +186,7 @@
 				width: 40px;
 				height: 3px;
 				border-radius: 4px;
-				background: #fff;
+				background: $red;
 				transition: all .3s;
 			}
 
@@ -140,7 +194,7 @@
 				transform: rotate(45deg);
 
 				.header__burger-line {
-					background: #000;
+					background: $yellow;
 
 					&:first-child,
 					&:last-child {
@@ -150,6 +204,15 @@
 				}
 			}
 		}
+
+		&__search {
+			margin-left: auto;
+		}
+	}
+
+	.hero {
+		padding-top: 70px;
+		background: url(../img/hero_bg_overlay.png) no-repeat 100%/cover, url(../img/hero-bg.jpg) 0px 70px/cover no-repeat;
 	}
 }
 
@@ -160,6 +223,7 @@
 		&__inner {
 			flex-direction: column;
 		}
+
 		&__text {
 			margin-bottom: 40px;
 		}
@@ -173,12 +237,14 @@
 			width: 100%;
 			text-align: center;
 		}
+
 		&__cards {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
 	}
+
 	.companies {
 		&__cards {
 			display: flex;
