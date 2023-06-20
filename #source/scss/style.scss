@@ -201,7 +201,7 @@ html {
 
 .hero {
 
-	background: url('../img/hero_bg_overlay.png') no-repeat center / cover, url('../img/hero-bg.jpg') center 100px / cover no-repeat;
+	background: url('../img/hero/hero_bg_overlay.png') no-repeat center / cover, url('../img/hero/hero-bg.jpg') center 100px / cover no-repeat;
 	// min-height: 100vh;
 	height: 970px;
 	display: flex;
@@ -568,6 +568,20 @@ html {
 		top: 20px;
 		left: 20px;
 	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		img {
+			width: 436px;
+			height: 499px;
+		}
+	}
+	&__logo {
+		position: absolute;
+		bottom: -39px;
+	}
 }
 
 .tabs {
@@ -642,7 +656,7 @@ html {
 
 				&-button {
 					border-left: 2px solid $red;
-					background: url('../img/arrow_up_icon.png') no-repeat center;
+					background: url('../img/block/arrow_up_icon.png') no-repeat center;
 					width: 52px;
 				}
 
@@ -693,7 +707,7 @@ html {
 		height: 46px;
 		width: 50px;
 		border-left: 2px solid #fff;
-		background: url('../img/arrow_down_icon.png') no-repeat center;
+		background: url('../img/block/arrow_down_icon.png') no-repeat center;
 	}
 
 	&__content {
