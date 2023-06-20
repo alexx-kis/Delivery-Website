@@ -43,6 +43,32 @@
 	}
 })();
 
+/*====================================  ====================================*/
+
+; (function () {
+	
+	let contents = document.querySelectorAll('.footer__column-list');
+	let headings = document.querySelectorAll('.footer__column-heading');
+
+
+
+	for (let i = 0; i < headings.length; i++) {
+		headings[i].addEventListener('click', function () {
+			let open = document.querySelector('.footer__column-list--active');
+			if (contents[i].classList.contains('footer__column-list--active')) {
+				contents[i].classList.remove('footer__column-list--active');
+
+			} else {
+				contents[i].classList.add('footer__column-list--active');
+				if (open) {
+					open.classList.remove('footer__column-list--active');
+
+				}
+			}
+		});
+	}
+})();
+
 /*==================================== BURGER ====================================*/
 
 ; (function () {
