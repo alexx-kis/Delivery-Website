@@ -74,18 +74,18 @@
 ; (function () {
 	let burger = document.querySelector('.header__burger');
 	let aside = document.querySelector('.header__aside');
-	let overlay = document.querySelector('.overlay');
+	let overlayMenu = document.querySelector('.overlay-menu');
 	
 	
 	burger.addEventListener('click', function () {
 		this.classList.toggle('header__burger--active');
 		aside.classList.toggle('header__aside--open');
-		overlay.classList.toggle('overlay--show');	
+		overlayMenu.classList.toggle('overlay-menu--show');	
 	});
 	
-	overlay.addEventListener('click', function () {
+	overlayMenu.addEventListener('click', function () {
 		if (aside.classList.contains('header__aside--open')) {
-			overlay.classList.remove('overlay--show');
+			overlayMenu.classList.remove('overlay-menu--show');
 			aside.classList.remove('header__aside--open');
 			burger.classList.remove('header__burger--active');
 		}
@@ -97,16 +97,16 @@
 ; (function () {
 	let btn = document.querySelector('.header__search-button');
 	let bar = document.querySelector('.header__search-bar');
-	let overlay = document.querySelector('.overlay');
+	let overlaySearch = document.querySelector('.overlay-search');
 
 	btn.addEventListener('click', function () {
 		bar.classList.toggle('header__search-bar--active');
-		overlay.classList.toggle('overlay--show');		
+		overlaySearch.classList.toggle('overlay-search--show');		
 	});
 	
-	overlay.addEventListener('click', function () {
+	overlaySearch.addEventListener('click', function () {
 		if (bar.classList.contains('header__search-bar--active')) {
-			overlay.classList.remove('overlay--show');	
+			overlaySearch.classList.remove('overlay-search--show');	
 			bar.classList.remove('header__search-bar--active');
 			
 		}

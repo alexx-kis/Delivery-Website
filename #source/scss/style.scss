@@ -15,7 +15,23 @@ html {
 	position: relative;
 }
 
-.overlay {
+.overlay-search {
+	background: #000000;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 2;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s;
+
+	&--show {
+		opacity: 0.4;
+		visibility: visible;
+	}
+
+}
+.overlay-menu {
 	background: #000000;
 	width: 100vw;
 	height: 100vh;
@@ -238,6 +254,11 @@ html {
 		background: $red;
 		border: none;
 		padding: 15px;
+		border-radius: 20px;
+		transition: all .3s;
+		&:active {
+				transform: scale(.8);
+			}
 	}
 
 	&__search-button {
