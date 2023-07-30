@@ -92,14 +92,14 @@ html {
 	&__top {
 		background: $red;
 		padding: 16px 0;
+		transform: translate(0, -100px);
+		transition: transform .5s 4s;
 	}
 
 	&__top-inner {
 		display: flex;
 		align-items: center;
 	}
-
-	&__top-item {}
 
 	&__lang {
 		margin-right: auto;
@@ -148,6 +148,8 @@ html {
 	&__body {
 		background: $yellow;
 		padding: 35px 0;
+		transform: translate(0, -190px);
+		transition: transform .5s 4.75s;
 	}
 
 	&__body-inner {
@@ -277,8 +279,6 @@ html {
 		}
 	}
 
-	&__search-icon {}
-
 	&__aside {
 		display: none;
 	}
@@ -290,9 +290,8 @@ html {
 
 .hero {
 
-	background: url('../img/hero/hero_bg_overlay.png') no-repeat center / cover, url('../img/hero/hero-bg.jpg') center 100px / cover no-repeat;
-	// min-height: 100vh;
-	height: 970px;
+	background: url('../img/hero/hero_bg_overlay.png') no-repeat center / cover, url('../img/hero/hero-bg-1.jpg') center / cover no-repeat;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	padding: 170px 0 20px 0;
@@ -310,6 +309,8 @@ html {
 
 	&__heading {
 		margin-bottom: 100px;
+		transform: translate(-100px, 0);
+		transition: all .5s;
 	}
 
 	&__text {
@@ -320,6 +321,8 @@ html {
 		color: $yellow;
 		max-width: 750px;
 		margin-bottom: 40px;
+		transform: translate(-100px, 0);
+		transition: all .5s 1s;
 	}
 
 	&__tags {
@@ -337,6 +340,19 @@ html {
 		letter-spacing: 0.03em;
 		color: $white;
 		font-weight: 700;
+		transform: scale(0);
+
+		&--1 {
+			transition: all .5s 2s;
+		}
+
+		&--2 {
+			transition: all .5s 2.5s;
+		}
+
+		&--3 {
+			transition: all .5s 3s;
+		}
 	}
 
 	&__dot {
@@ -346,6 +362,15 @@ html {
 		text-transform: uppercase;
 		letter-spacing: 0.03em;
 		color: $yellow;
+		transform: scale(0);
+
+		&--1 {
+			transition: all .5s 2.25s;
+		}
+
+		&--2 {
+			transition: all .5s 2.75s;
+		}
 	}
 
 	&__button-box {
@@ -357,7 +382,19 @@ html {
 		font-size: 12px;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+	}
+
+	&__button-wrapper {
 		margin-right: 20px;
+		transform: scale(0);
+
+		&--1 {
+			transition: all .5s cubic-bezier(0.32, -0.64, 0.79, 2) 3.5s;
+		}
+
+		&--2 {
+			transition: all .5s cubic-bezier(0.32, -0.64, 0.79, 2) 3.75s;
+		}
 	}
 }
 
@@ -382,6 +419,8 @@ html {
 		text-transform: uppercase;
 		letter-spacing: 0.03em;
 		color: #f8f8f8;
+		transform: translate(-100px, 0);
+		transition: all 1s .2s;
 	}
 
 	&__heading-text {
@@ -391,6 +430,8 @@ html {
 		letter-spacing: 0.03em;
 		color: $red;
 		position: absolute;
+		transform: translate(-100px, 0);
+		transition: all .5s;
 	}
 
 	&__cards {
@@ -400,6 +441,24 @@ html {
 
 	&__card {
 		max-width: 270px;
+		transform: translate(-100px, 0);
+
+		&--1 {
+			transition: all .5s .5s;
+		}
+
+		&--2 {
+			transition: all .5s .75s;
+		}
+
+		&--3 {
+			transition: all .5s 1s;
+		}
+
+		&--last {
+			transform: translate(100px, 0);
+			transition: all .5s 1.25s;
+		}
 	}
 
 	&__card-img {
@@ -532,9 +591,10 @@ html {
 
 .best {
 	height: 700px;
-	background: url('../img/best/best_overlay.png') no-repeat 100% / cover, url('../img/best/best-bg.png') 100% / cover no-repeat;
+	background: url('../img/best/best_overlay.png') no-repeat 100% / cover, url('../img/best/best-bg-1.png') 100% / cover no-repeat;
 	padding-top: 153px;
 	margin-bottom: 350px;
+	transition: opacity 1s;
 
 	&__heading {
 		font-size: 50px;
@@ -545,6 +605,13 @@ html {
 		text-align: center;
 		margin-bottom: 40px;
 		padding: 0 20px;
+		transform: translate(0, 100px);
+		transition: all .5s .5s;
+	}
+
+	&__button-box {
+		transform: scale(0);
+		transition: all .5s cubic-bezier(0.32, -0.64, 0.79, 2) .5s;
 	}
 
 	&__button {
@@ -582,6 +649,22 @@ html {
 
 	&__cards-item {
 		box-shadow: 0px 10px 18px 0px rgba(191, 191, 191, 0.4);
+	}
+
+	&__card {
+		transform: scale(0);
+
+		&--1 {
+			transition: all .5s .25s;
+		}
+
+		&--2 {
+			transition: all .5s .5s;
+		}
+
+		&--3 {
+			transition: all .5s .75s;
+		}
 	}
 
 	&__card-info {
@@ -634,20 +717,24 @@ html {
 /*==================================== BLOCK ====================================*/
 
 .block {
+	padding-bottom: 200px;
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 	}
 
-	padding-bottom: 200px;
-
-	&__tabs {}
+	&__tabs {
+		transform: translate(-100px);
+		transition: all .5s;
+	}
 
 	&__image-box {
-		// position: relative;
 		border: 20px solid $yellow;
 		width: 435px;
 		height: 500px;
+		transform: translate(100px);
+		transition: all .5s .5s;
 	}
 
 	&__image {
@@ -662,11 +749,13 @@ html {
 		position: absolute;
 		top: 0;
 		left: 0;
+
 		img {
 			width: 436px;
 			height: 499px;
 		}
 	}
+
 	&__logo {
 		position: absolute;
 		bottom: -39px;
@@ -675,8 +764,6 @@ html {
 
 .tabs {
 	position: relative;
-
-	&__inner {}
 
 	&__menu {
 		display: flex;
@@ -712,6 +799,7 @@ html {
 	}
 }
 
+
 .tab {
 	padding: 40px 40px 30px;
 	background: $red;
@@ -720,10 +808,6 @@ html {
 	opacity: 0;
 	position: absolute;
 	transition: all .3s;
-
-	&__content {}
-
-	&__acc {}
 
 
 	&--active {
@@ -819,10 +903,6 @@ html {
 		margin-bottom: 20px;
 	}
 
-	&__content-list {}
-
-	&__list {}
-
 	&__list-item {
 		position: relative;
 
@@ -852,6 +932,7 @@ html {
 .excellence {
 	padding: 100px 0;
 	background: $red;
+	transition: opacity 1s;
 
 	&__inner {
 		display: flex;
@@ -871,6 +952,8 @@ html {
 		text-transform: uppercase;
 		letter-spacing: 0.03em;
 		color: #ffffff;
+		transform: translate(-100px, 0);
+		transition: all .5s .5s;
 	}
 
 	&__text {
@@ -880,9 +963,14 @@ html {
 		letter-spacing: 0.03em;
 		color: #ffffff;
 		margin-right: 20px;
+		transform: translate(-100px, 0);
+		transition: all .5s 1s;
 	}
 
-	&__button-box {}
+	&__button-box {
+		transform: scale(0);
+		transition: all .5s cubic-bezier(0.32, -0.64, 0.79, 2) 1s;
+	}
 
 	&__button {
 		background: $dark-red;
@@ -906,6 +994,26 @@ html {
 	&__cards {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	&__card {
+		transform: scale(0);
+
+		&--1 {
+			transition: all .5s;
+		}
+
+		&--2 {
+			transition: all .5s .25s;
+		}
+
+		&--3 {
+			transition: all .5s .5s;
+		}
+
+		&--4 {
+			transition: all .5s .75s;
+		}
 	}
 
 	&__link {
@@ -946,6 +1054,16 @@ html {
 	&__image {
 		background: #fff;
 
+		&--1 {
+			transform: translate(-100px, 0);
+			transition: all .5s;
+		}
+
+		&--2 {
+			transform: translate(100px, 0);
+			transition: all .5s .5s;
+		}
+
 		img {
 			width: 100%;
 		}
@@ -964,6 +1082,9 @@ html {
 
 	&__column {
 		margin-right: 10px;
+		transform: scale(1, 0);
+		transition: all .5s;
+		transform-origin: 0 -50%;
 
 		&:last-child {
 			margin-right: 0;
@@ -1019,6 +1140,20 @@ html {
 	}
 }
 
+
+/*==================================== ANIMATION ====================================*/
+
+.loading,
+.anim-item {
+	opacity: 0;
+}
+
+.loaded,
+.anim-item--active {
+	opacity: 1;
+	transform: translate(0, 0);
+	transform: scale(1);
+}
 
 /*==================================== MEDIA ====================================*/
 /*==================================== MEDIA ====================================*/
