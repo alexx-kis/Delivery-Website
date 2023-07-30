@@ -74,16 +74,15 @@
 ; (function () {
 	let burger = document.querySelector('.header__burger');
 	let aside = document.querySelector('.header__aside');
-<<<<<<< HEAD
 	let overlayMenu = document.querySelector('.overlay-menu');
-	
-	
+
+
 	burger.addEventListener('click', function () {
 		this.classList.toggle('header__burger--active');
 		aside.classList.toggle('header__aside--open');
-		overlayMenu.classList.toggle('overlay-menu--show');	
+		overlayMenu.classList.toggle('overlay-menu--show');
 	});
-	
+
 	overlayMenu.addEventListener('click', function () {
 		if (aside.classList.contains('header__aside--open')) {
 			overlayMenu.classList.remove('overlay-menu--show');
@@ -102,71 +101,60 @@
 
 	btn.addEventListener('click', function () {
 		bar.classList.toggle('header__search-bar--active');
-		overlaySearch.classList.toggle('overlay-search--show');		
+		overlaySearch.classList.toggle('overlay-search--show');
 	});
-	
+
 	overlaySearch.addEventListener('click', function () {
 		if (bar.classList.contains('header__search-bar--active')) {
-			overlaySearch.classList.remove('overlay-search--show');	
+			overlaySearch.classList.remove('overlay-search--show');
 			bar.classList.remove('header__search-bar--active');
-			
+
 		}
 	});
-	
-})();
-=======
 
-
-	burger.addEventListener('click', function () {
-		this.classList.toggle('header__burger--active');
-		aside.classList.toggle('header__aside--open');
-
-
-	});
 })();
 
 
 /*==================================== ANIMATION ====================================*/
 
 window.onload = function () {
-	let loadings = document.querySelectorAll('.loading');
+    let loadings = document.querySelectorAll('.loading');
 
-	for (let loading of loadings) {
-		loading.classList.add('loaded');
-	}
+    for (let loading of loadings) {
+        loading.classList.add('loaded');
+    }
 };
 
 let animItems = document.querySelectorAll('.anim-item');
 
 if (animItems.length > 0) {
-	window.addEventListener('scroll', animOnScroll);
-	function animOnScroll() {
-		for (let i = 0; i < animItems.length; i++) {
-			let animItem = animItems[i];
-			let animItemHeight = animItem.offsetHeight;
-			let animItemOffset = offset(animItem).top;
-			let animStart = 10;
-			let animItemPoint = window.innerHeight - (animItemHeight / animStart);
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll() {
+        for (let i = 0; i < animItems.length; i++) {
+            let animItem = animItems[i];
+            let animItemHeight = animItem.offsetHeight;
+            let animItemOffset = offset(animItem).top;
+            let animStart = 10;
+            let animItemPoint = window.innerHeight - (animItemHeight / animStart);
 
-			if (animItemHeight > window.innerHeight) {
-				animItemPoint = window.innerHeight - (window.innerHeight / animStart);
-			}
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - (window.innerHeight / animStart);
+            }
 
-			if ((pageYOffset > animItemOffset - animItemPoint) && (pageYOffset < (animItemOffset + animItemHeight))) {
-				animItem.classList.add('anim-item--active');
-			} else {
-				if (!animItem.classList.contains('anim-no-hide')) {
-					animItem.classList.remove('anim-item--active');
-				}
-			}
+            if ((pageYOffset > animItemOffset - animItemPoint) && (pageYOffset < (animItemOffset + animItemHeight))) {
+                animItem.classList.add('anim-item--active');
+            } else {
+                if (!animItem.classList.contains('anim-no-hide')) {
+                    animItem.classList.remove('anim-item--active');
+                }
+            }
 
-			function offset(elem) {
-				let rect = elem.getBoundingClientRect(),
-					scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-					scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-				return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-			}
-		}
-	}
+            function offset(elem) {
+                let rect = elem.getBoundingClientRect(),
+                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+            }
+        }
+    }
 }
->>>>>>> 67b6026 (animated)
